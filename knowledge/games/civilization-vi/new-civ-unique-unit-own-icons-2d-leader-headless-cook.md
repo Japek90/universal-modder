@@ -44,7 +44,7 @@ tags: [custom-civ, unique-unit, 2d-leader, fallback-leader, ui-icons, blp, asset
 - **Data mod** (`.modinfo`):
   - FrontEnd and InGame `UpdateDatabase` (SQL), `UpdateText`, `UpdateIcons`, `UpdateColors`;
   - `UpdateArt` with a `.dep` file.
-- `um scan` reports "unknown native engine" and suggests proxy-DLL hooks. That's wrong for this game; see the Middle-earth note in this KB, which explains the same.
+- `um scan` reports "unknown native engine" and suggests proxy-DLL hooks. That's wrong for this game; see the [Middle-earth note](total-conversion-middle-earth-trees-civs-2d-leaders-custom-3.md), which explains the same.
 - **No ModBuddy:** the `.dep`, artdefs, `.tex` and `.xlp` files are plain XML written by scripts, and the cooker runs from the command line.
 - **Reference used:** Firaxis DLC folders shipped with the game, mainly Australia (Digger = an Infantry replacement) and Poland (own `LeaderFallbackImages.blp`).
 
@@ -149,12 +149,13 @@ tags: [custom-civ, unique-unit, 2d-leader, fallback-leader, ui-icons, blp, asset
 6. **Black strip under the left text panel** on the leader screen.
    - **Cause:** a 2:1 fallback image scaled to screen height and centred at 3/4 width ends at about 19% of a 16:9 screen.
    - **Fix:** make the image 3:1 (3072x1024) and darken the left third a little for the text.
+   - This refines Gotcha 9 of the [Middle-earth note](total-conversion-middle-earth-trees-civs-2d-leaders-custom-3.md), which used 2:1 (2048x1024) images.
 7. **An offline check deleted base-game rows** when stripping old mod rows with `GLOB '*_ME_*'`. Base tags such as `..._NEAR_ME_...` matched.
    - **Fix:** delete by the exact identifiers parsed from the mod's SQL, and prove it removes 0 rows from clean DBs.
 8. **`Database.log` error count grows between runs** with no change to the mod.
    - **Cause:** base-game duplicate text tags (`LOC_CHALLENGE_*`, `LOC_CLICKOUT_*`) repeat on every DB reload.
    - **Fix:** compare by message, not by count.
-9. **Clicks from a cursor-jump tool are ignored** (Gotcha 1 in the Middle-earth note, confirmed).
+9. **Clicks from a cursor-jump tool are ignored** (Gotcha 1 in the [Middle-earth note](total-conversion-middle-earth-trees-civs-2d-leaders-custom-3.md), confirmed).
    - Use SendInput absolute moves with a glide and a dwell.
    - The city production gear button sometimes needs a second click: the first only shows its tooltip.
 10. **The "Modern" start era doesn't give Replaceable Parts.** It is a Modern-era tech, about 60 turns away. Start in the Atomic era to test an Infantry replacement.
