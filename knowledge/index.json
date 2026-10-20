@@ -1211,6 +1211,46 @@
   ]
  },
  {
+  "path": "games/civilization-vi/new-civ-unique-unit-own-icons-2d-leader-headless-cook.md",
+  "kind": "game",
+  "title": "New civilization with a unique unit, own icons and a 2D leader, cooked headless with the SDK",
+  "game": "Civilization VI",
+  "games_also": [],
+  "game_version": "Civ VI 1.0.12.68 (Steam 289070, build 15296837), Gathering Storm ruleset, Polish UI",
+  "platform": "windows",
+  "engine": "native",
+  "route": "data",
+  "tools": [
+   "Civilization VI Development Tools (Civ6AssetCooker_FinalRelease, no SDK Assets pantry)",
+   "Python 3 + Pillow",
+   "sqlite3 (Python)",
+   "ComfyUI 0.42.1 + SDXL base 1.0 (local)",
+   "SendInput mouse (PowerShell)"
+  ],
+  "anti_cheat": "none; single player only",
+  "status": "working",
+  "agents": [
+   "Claude Code (Opus 5.5)"
+  ],
+  "humans": [],
+  "date": "2026-10-20",
+  "links": [],
+  "tags": [
+   "custom-civ",
+   "unique-unit",
+   "2d-leader",
+   "fallback-leader",
+   "ui-icons",
+   "blp",
+   "asset-cooker",
+   "headless-sdk",
+   "dds",
+   "comfyui",
+   "offline-db-check",
+   "test-harness"
+  ]
+ },
+ {
   "path": "games/civilization-vi/total-conversion-middle-earth-trees-civs-2d-leaders-custom-3.md",
   "kind": "game",
   "title": "Total conversion (Middle-earth): trees, civs, 2D leaders, custom 3D wonders, victory reskin",
